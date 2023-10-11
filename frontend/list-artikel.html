@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--favicon-->
+  <link rel="icon" href="assets/images/LogoIcon.png" type="image/png" />
+  <!--plugins-->
+  <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+  <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+  <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+  <link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+  <!-- loader-->
+  <link href="assets/css/pace.min.css" rel="stylesheet" />
+  <script src="assets/js/pace.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap-extended.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="assets/css/app.css" rel="stylesheet" />
+  <link href="assets/css/icons.css" rel="stylesheet" />
+  <!-- Theme Style CSS -->
+  <link rel="stylesheet" href="assets/css/dark-theme.css" />
+  <link rel="stylesheet" href="assets/css/semi-dark.css" />
+  <link rel="stylesheet" href="assets/css/header-colors.css" />
+  <title>List Artikel</title>
+  <style>
+    #codeBlock {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!--wrapper-->
+  <div class="wrapper">
+    <!--start header wrapper-->
+    <div class="header-wrapper">
+      <!--start header -->
+      <header>
+        <div class="topbar d-flex align-items-center">
+          <nav class="navbar navbar-expand">
+            <div class="topbar-logo-header">
+              <div class="">
+                <img src="assets/images/HalalLogo.png" class="logo-icon" alt="logo icon" />
+              </div>
+            </div>
+            <div class="mobile-toggle-menu"><i class="bx bx-menu"></i></div>
+            <div class="top-menu-left d-none d-lg-block ps-3">
+              <div style="font-size: 20px">Kontributor Halal Food</div>
+            </div>
+            <div class="search-bar flex-grow-1">
+              <div class="position-relative search-bar-box">
+                <input type="text" class="form-control search-control" placeholder="Type to search..." />
+                <span class="position-absolute top-50 search-show translate-middle-y"><i class="bx bx-search"></i></span>
+                <span class="position-absolute top-50 search-close translate-middle-y"><i class="bx bx-x"></i></span>
+              </div>
+            </div>
+            <div class="top-menu ms-auto">
+              <ul class="navbar-nav align-items-center">
+                <li class="nav-item dropdown dropdown-large">
+                  <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="alert-count">7</span>
+                    <i class="bx bx-bell"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <a href="javascript:;">
+                      <div class="msg-header">
+                        <p class="msg-header-title">Notifications</p>
+                        <p class="msg-header-clear ms-auto">Marks all as read</p>
+                      </div>
+                    </a>
+                    <div class="header-notifications-list">
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="notify bg-light-primary text-primary"><i class="bx bx-group"></i></div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">New Customers<span class="msg-time float-end">14 Sec ago</span></h6>
+                            <p class="msg-info">5 new user registered</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="notify bg-light-danger text-danger"><i class="bx bx-cart-alt"></i></div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">New Orders <span class="msg-time float-end">2 min ago</span></h6>
+                            <p class="msg-info">You have recived new orders</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="notify bg-light-success text-success"><i class="bx bx-file"></i></div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">24 PDF File<span class="msg-time float-end">19 min ago</span></h6>
+                            <p class="msg-info">The pdf files generated</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="notify bg-light-warning text-warning"><i class="bx bx-send"></i></div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">Time Response <span class="msg-time float-end">28 min ago</span></h6>
+                            <p class="msg-info">5.1 min avarage time response</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="notify bg-light-info text-info"><i class="bx bx-home-circle"></i></div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">New Product Approved <span class="msg-time float-end">2 hrs ago</span></h6>
+                            <p class="msg-info">Your new product has approved</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="notify bg-light-danger text-danger"><i class="bx bx-message-detail"></i></div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">New Comments <span class="msg-time float-end">4 hrs ago</span></h6>
+                            <p class="msg-info">New customer comments recived</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="notify bg-light-success text-success"><i class="bx bx-check-square"></i></div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">Your item is shipped <span class="msg-time float-end">5 hrs ago</span></h6>
+                            <p class="msg-info">Successfully shipped your item</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="notify bg-light-primary text-primary"><i class="bx bx-user-pin"></i></div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">New 24 authors<span class="msg-time float-end">1 day ago</span></h6>
+                            <p class="msg-info">24 new authors joined last week</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="notify bg-light-warning text-warning"><i class="bx bx-door-open"></i></div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">Defense Alerts <span class="msg-time float-end">2 weeks ago</span></h6>
+                            <p class="msg-info">45% less alerts last 4 weeks</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <a href="javascript:;">
+                      <div class="text-center msg-footer">View All Notifications</div>
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown dropdown-large">
+                  <!-- <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">8</span>
+										  <i class='bx bx-comment'></i>
+									  </a> -->
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <a href="javascript:;">
+                      <div class="msg-header">
+                        <p class="msg-header-title">Messages</p>
+                        <p class="msg-header-clear ms-auto">Marks all as read</p>
+                      </div>
+                    </a>
+                    <div class="header-message-list">
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="user-online">
+                            <img src="assets/images/avatars/avatar.png" class="msg-avatar" alt="user avatar" />
+                          </div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">Daisy Anderson <span class="msg-time float-end">5 sec ago</span></h6>
+                            <p class="msg-info">The standard chunk of lorem</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="user-online">
+                            <img src="assets/images/avatars/avatar.png" class="msg-avatar" alt="user avatar" />
+                          </div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">Althea Cabardo <span class="msg-time float-end">14 sec ago</span></h6>
+                            <p class="msg-info">Many desktop publishing packages</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="user-online">
+                            <img src="assets/images/avatars/avatar.png" class="msg-avatar" alt="user avatar" />
+                          </div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">Oscar Garner <span class="msg-time float-end">8 min ago</span></h6>
+                            <p class="msg-info">Various versions have evolved over</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="user-online">
+                            <img src="assets/images/avatars/avatar.png" class="msg-avatar" alt="user avatar" />
+                          </div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">Katherine Pechon <span class="msg-time float-end">15 min ago</span></h6>
+                            <p class="msg-info">Making this the first true generator</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="user-online">
+                            <img src="assets/images/avatars/avatar.png" class="msg-avatar" alt="user avatar" />
+                          </div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">Amelia Doe <span class="msg-time float-end">22 min ago</span></h6>
+                            <p class="msg-info">Duis aute irure dolor in reprehenderit</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="user-online">
+                            <img src="assets/images/avatars/avatar.png" class="msg-avatar" alt="user avatar" />
+                          </div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">Cristina Jhons <span class="msg-time float-end">2 hrs ago</span></h6>
+                            <p class="msg-info">The passage is attributed to an unknown</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="user-online">
+                            <img src="assets/images/avatars/avatar.png" class="msg-avatar" alt="user avatar" />
+                          </div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">James Caviness <span class="msg-time float-end">4 hrs ago</span></h6>
+                            <p class="msg-info">The point of using Lorem</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="user-online">
+                            <img src="assets/images/avatars/avatar.png" class="msg-avatar" alt="user avatar" />
+                          </div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">Peter Costanzo <span class="msg-time float-end">6 hrs ago</span></h6>
+                            <p class="msg-info">It was popularised in the 1960s</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="user-online">
+                            <img src="assets/images/avatars/avatar.png" class="msg-avatar" alt="user avatar" />
+                          </div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">David Buckley <span class="msg-time float-end">2 hrs ago</span></h6>
+                            <p class="msg-info">Various versions have evolved over</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="user-online">
+                            <img src="assets/images/avatars/avatar.png" class="msg-avatar" alt="user avatar" />
+                          </div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">Thomas Wheeler <span class="msg-time float-end">2 days ago</span></h6>
+                            <p class="msg-info">If you are going to use a passage</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                          <div class="user-online">
+                            <img src="assets/images/avatars/avatar.png" class="msg-avatar" alt="user avatar" />
+                          </div>
+                          <div class="flex-grow-1">
+                            <h6 class="msg-name">Johnny Seitz <span class="msg-time float-end">5 days ago</span></h6>
+                            <p class="msg-info">All the Lorem Ipsum generators</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <a href="javascript:;">
+                      <div class="text-center msg-footer">View All Messages</div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="user-box dropdown">
+              <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/images/avatars/ersa.png" class="user-img" alt="user avatar" />
+                <div class="user-info ps-3">
+                  <p class="user-name mb-0">Ersa Nur Maulana</p>
+                  <p class="designattion mb-0">PPH Bandung</p>
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="javascript:;"><i class="bx bx-cog"></i><span>Settings</span></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="javascript:;"><i class="bx bx-home-circle"></i><span>Dashboard</span></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="javascript:;"><i class="bx bx-dollar-circle"></i><span>Earnings</span></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="javascript:;"><i class="bx bx-download"></i><span>Downloads</span></a>
+                </li>
+                <li>
+                  <div class="dropdown-divider mb-0"></div>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="javascript:;"><i class="bx bx-log-out-circle"></i><span>Logout</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!--end header -->
+      <!--navigation-->
+      <div class="nav-container">
+			<div class="mobile-topbar-header">
+			  <div>
+				<img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon" />
+			  </div>
+			  <div>
+				<h4 class="logo-text">Synadmin</h4>
+			  </div>
+			  <div class="toggle-icon ms-auto"><i class="bx bx-first-page"></i></div>
+			</div>
+			<nav class="topbar-nav">
+			  <ul class="metismenu" id="menu">
+				<li>
+				  <a href="dashboard.html">
+					<div class="parent-icon"><i class="bx bx-home-circle"></i></div>
+					<div class="menu-title">Dashboard</div>
+				  </a>
+				</li>
+				<li>
+				  <a class="has-arrow" href="javascript:;">
+					<div class="parent-icon"><i class="bx bx-file-blank"></i></div>
+					<div class="menu-title">Review Sertifikasi</div>
+				  </a>
+				  <ul>
+					<li>
+					  <a href="review_sertifikasi.html"><i class="bx bx-right-arrow-alt"></i>Review Saya</a>
+					</li>
+					<li>
+					  <a href="list_resto.html"><i class="bx bx-right-arrow-alt"></i>List Restoran</a>
+					</li>
+					<li>
+					  <a href="list_pengaduan.html"><i class="bx bx-right-arrow-alt"></i>Pengaduan</a>
+					</li>
+				  </ul>
+				</li>
+				<li>
+				  <a class="has-arrow" href="javascript:;">
+					<div class="parent-icon"><i class="bx bx-spreadsheet"></i></div>
+					<div class="menu-title">Sertifikasi MUI</div>
+				  </a>
+				  <ul>
+					<li>
+					  <a href="charts-apex-chart.html"><i class="bx bx-right-arrow-alt"></i>Regular</a>
+					</li>
+					<li>
+					  <a href="charts-chartjs.html"><i class="bx bx-right-arrow-alt"></i>Self Declare</a>
+					</li>
+				  </ul>
+				</li>
+				<li>
+				  <a class="has-arrow" href="javascript:;">
+					<div class="parent-icon"><i class="bx bx-news"></i></div>
+					<div class="menu-title">Artikel</div>
+				  </a>
+				  <ul>
+					<li>
+					  <a href="widgets.html"><i class="bx bx-right-arrow-alt"></i>Publish</a>
+					</li>
+					<li>
+					  <a href="component-alerts.html"><i class="bx bx-right-arrow-alt"></i>Draft</a>
+					</li>
+					<li>
+					  <a href="component-accordions.html"><i class="bx bx-right-arrow-alt"></i>Trash</a>
+					</li>
+				  </ul>
+				</li>
+				<li>
+				  <div class="back-menu">
+					<a href="#">Kembali Ke Halaman Utama</a>
+				  </div>
+				</li>
+			  </ul>
+			</nav>
+		  </div>
+		  <!--end navigation-->
+		</div>
+      <!--end navigation-->
+    </div>
+    <!--end header wrapper-->
+    <!--start page wrapper -->
+    <div class="page-wrapper">
+      <div class="page-content">
+        <!--breadcrumb-->
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+          <div class="menu-title mx-3" style="font-size: 24px; min-width: 199px;">
+            Artikel Halal Food
+          </div>
+          <div class="alert alert-secondary border-0 bg-secondary alert-dismissible fade show py-2  mx-3" style="display: none;" id="codeBlock">
+            <div class="d-flex align-items-center">
+              <div class="font-35 text-white"><i class='bx bxs-check-circle'></i>
+              </div>
+              <div class="ms-3">
+                <h6 class="mb-0 text-white">Berhasil!</h6>
+                <div class="text-white" id="peringatan"></div>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <!-- <div class="alert alert-dark mx-3" role="alert" id="codeBlock" style="display: none;"></div> -->
+          <div class="ms-auto mx-3">
+            <a href="buat-artikel.html" class="btn btn-primary btn-sm" style="min-width: 150px;">Buat Artikel <i data-feather="plus"></i></a>
+          </div>
+        </div>
+        <!--end breadcrumb-->
+        <div class="card">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table id="example" class="table table-striped table-bordered" style="width: 100%">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Judul Artikel</th>
+                    <th>Tanggal</th>
+                    <th>Cuplikan Artikel</th>
+                    <th>Jumlah Komentar</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      Mengenal Konsep Makanan Halal dan Kenapa Penting untuk
+                      Diketahui
+                    </td>
+                    <td>24/03/23</td>
+                    <td>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing
+                      elit. Illo aut repellendus sint at repellat odio?
+                    </td>
+                    <td>3</td>
+                    <td>
+                      <span class="badge bg-warning text-dark">dalam Review</span>
+                    </td>
+                    <td>
+                      <a href="show_artikel.html"><i class="bx bx-show-alt" style="color:#434D56 ;"></i></a>
+                      <!-- <a href="buat-artikelartikel.html"><i class="bx bx-edit" style="color:#2B89EB ;"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bx bx-trash" style="color:#CA4E4E ;"></i></a> -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      Mengenal Konsep Makanan Halal dan Kenapa Penting untuk
+                      Diketahui
+                    </td>
+                    <td>24/03/23</td>
+                    <td>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing
+                      elit. Illo aut repellendus sint at repellat odio?
+                    </td>
+                    <td>3</td>
+                    <td>
+                      <span class="badge bg-success text-light">Selesai</span>
+                    </td>
+                    <td>
+                      <a href="show_artikel.html"><i class="bx bx-show-alt" style="color:#434D56 ;"></i></a>
+                      <a href="buat-artikelartikel.html"><i class="bx bx-edit" style="color:#2B89EB ;"></i></a>
+                      <!-- <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bx bx-trash" style="color:#CA4E4E ;"></i></a> -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      Mengenal Konsep Makanan Halal dan Kenapa Penting untuk
+                      Diketahui
+                    </td>
+                    <td>24/03/23</td>
+                    <td>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing
+                      elit. Illo aut repellendus sint at repellat odio?
+                    </td>
+                    <td>3</td>
+                    <td>
+                      <span class="badge bg-secondary text-light">Mennunggu Review</span>
+                    </td>
+                    <td>
+                      <a href="show_artikel.html"><i class="bx bx-show-alt" style="color:#434D56 ;"></i></a>
+                      <a href="buat-artikelartikel.html"><i class="bx bx-edit" style="color:#2B89EB ;"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bx bx-trash" style="color:#CA4E4E ;"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      Mengenal Konsep Makanan Halal dan Kenapa Penting untuk
+                      Diketahui
+                    </td>
+                    <td>24/03/23</td>
+                    <td>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing
+                      elit. Illo aut repellendus sint at repellat odio?
+                    </td>
+                    <td>3</td>
+                    <td>
+                      <span class="badge bg-danger text-light">ditolak</span>
+                    </td>
+                    <td>
+                      <a href="show_artikel.html"><i class="bx bx-show-alt" style="color:#434D56 ;"></i></a>
+                      <a href="buat-artikelartikel.html"><i class="bx bx-edit" style="color:#2B89EB ;"></i></a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bx bx-trash" style="color:#CA4E4E ;"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end page wrapper -->
+    <!--start overlay-->
+    <div class="overlay toggle-icon"></div>
+    <!--end overlay-->
+    <!--Start Back To Top Button-->
+    <a href="javaScript:;" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
+    <!--End Back To Top Button-->
+    <footer class="page-footer">
+      <p class="mb-0">Copyright © 2021. All right reserved.</p>
+    </footer>
+  </div>
+  <!--end wrapper-->
+  <!--start switcher-->
+  <div class="switcher-wrapper">
+    <div class="switcher-btn"><i class="bx bx-cog bx-spin"></i></div>
+    <div class="switcher-body">
+      <div class="d-flex align-items-center">
+        <h5 class="mb-0 text-uppercase">Theme Customizer</h5>
+        <button type="button" class="btn-close ms-auto close-switcher" aria-label="Close"></button>
+      </div>
+      <hr />
+      <h6 class="mb-0">Theme Styles</h6>
+      <hr />
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="lightmode" checked />
+          <label class="form-check-label" for="lightmode">Light</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="darkmode" />
+          <label class="form-check-label" for="darkmode">Dark</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="semidark" />
+          <label class="form-check-label" for="semidark">Semi Dark</label>
+        </div>
+      </div>
+      <hr />
+      <div class="form-check">
+        <input class="form-check-input" type="radio" id="minimaltheme" name="flexRadioDefault" />
+        <label class="form-check-label" for="minimaltheme">Minimal Theme</label>
+      </div>
+      <hr />
+      <h6 class="mb-0">Header Colors</h6>
+      <hr />
+      <div class="header-colors-indigators">
+        <div class="row row-cols-auto g-3">
+          <div class="col">
+            <div class="indigator headercolor1" id="headercolor1"></div>
+          </div>
+          <div class="col">
+            <div class="indigator headercolor2" id="headercolor2"></div>
+          </div>
+          <div class="col">
+            <div class="indigator headercolor3" id="headercolor3"></div>
+          </div>
+          <div class="col">
+            <div class="indigator headercolor4" id="headercolor4"></div>
+          </div>
+          <div class="col">
+            <div class="indigator headercolor5" id="headercolor5"></div>
+          </div>
+          <div class="col">
+            <div class="indigator headercolor6" id="headercolor6"></div>
+          </div>
+          <div class="col">
+            <div class="indigator headercolor7" id="headercolor7"></div>
+          </div>
+          <div class="col">
+            <div class="indigator headercolor8" id="headercolor8"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="deleteModalLabel">Apakah Anda Yakin Akan Menghapus Artikel?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Artikel yang sudah Anda buat akan secara otomatis terhapus dan tidak bisa dikembalikan kembali. 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak, kembali</button>
+        <button class="btn btn-primary showButton" data-bs-dismiss="modal" data-pesan="Data Artikel berhasil dihapus">Ya, Hapus</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--end switcher-->
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!--plugins-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+  <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+  <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+  <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+  <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
+    
+
+    $(document).ready(function() {
+      $("#example").DataTable();
+    });
+  
+  
+    $(document).ready(function() {
+      var table = $("#example2").DataTable({
+        lengthChange: false,
+        buttons: ["copy", "excel", "pdf", "print"],
+      });
+
+      table
+        .buttons()
+        .container()
+        .appendTo("#example2_wrapper .col-md-6:eq(0)");
+    });
+
+    $(document).ready(function() {
+      $(".showButton").click(function() {
+        var pesan = $(this).data("pesan");
+        var codeBlock = $("#codeBlock");
+        var peringatan = $("#peringatan");
+        
+        if (!codeBlock.hasClass("shown")) {
+          codeBlock.addClass("shown");
+          codeBlock.fadeIn();
+        }
+
+        peringatan.text(pesan);
+        codeBlock.delay(5000).fadeOut(function() {
+          codeBlock.removeClass("shown");
+        });
+      });
+    });
+  </script>
+  <!--app JS-->
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
